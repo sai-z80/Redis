@@ -26,3 +26,7 @@ Primary metric: fresh withheld oracle **90** (implementation **not published**).
 Batch OpenRouter spend (delta from baseline for these six): ~**$3.65**. Common failures on 88/90 models: `ex_seconds_overflow_invalid_expire_time`, `px_absolute_overflow_invalid_expire_time`.
 
 Full machine-readable: `BATCH_V2_RESULTS.json`. Per-run: `runs/<id>/{manifest,scores,transcript,workspace}`.
+
+## Flagship correction (in progress)
+
+See [`FLAGSHIP_COMPARISON_IN_PROGRESS.md`](FLAGSHIP_COMPARISON_IN_PROGRESS.md) for Opus 5.5 + DeepSeek V4 Pro completed rows and pending GPT-5.5 Pro.

@@ -1,0 +1,882 @@
+{
+  "run_id": "b2f-deepseek-v4-pro-0813-r1",
+  "protocol": "batch-v2-completion-oriented",
+  "scored_at": "2026-11-06T21:32:52Z",
+  "model_id": "deepseek/deepseek-v4-pro-0813",
+  "test_mode": false,
+  "stop_reason": "model_done",
+  "stop_class": "model_done",
+  "is_harness_or_api_failure": false,
+  "cost_usd_usage_sum": 0.480921,
+  "cost_usd_billed_generation_api": 0.480921,
+  "build_ok": true,
+  "build_output_tail": "",
+  "freeze_ok": true,
+  "freeze_problems": [],
+  "freeze_sha256": "0eaf67ed96f69e5e4529031029e2d948b19501c81220f40a3ae75d6d3116721b",
+  "workspace_sha256": "4cb43a0b412070979d12d5f5891920939897b582a1f3c0fbb6967d0e1362ec09",
+  "primary_metric": "hidden.pass_rate",
+  "smoke_tests_unmodified": true,
+  "regression_tests_unmodified": true,
+  "hidden": {
+    "passed": 90,
+    "total": 90,
+    "results": [
+      {
+        "name": "ping_bare_returns_pong",
+        "pass": true,
+        "detail": "",
+        "seconds": 0.001
+      },
+      {
+        "name": "ping_with_message_echoes_bulk",
+        "pass": true,
+        "detail": "",
+        "seconds": 0.0
+      },
+      {
+        "name": "ping_with_empty_message",
+        "pass": true,
+        "detail": "",
+        "seconds": 0.0
+      },
+      {
+        "name": "ping_with_binary_message",
+        "pass": true,
+        "detail": "",
+        "seconds": 0.0
+      },
+      {
+        "name": "ping_two_args_arity_error",
+        "pass": true,
+        "detail": "",
+        "seconds": 0.0
+      },
+      {
+        "name": "ping_lowercase_and_mixed_case",
+        "pass": true,
+        "detail": "",
+        "seconds": 0.0
+      },
+      {
+        "name": "echo_returns_argument",
+        "pass": true,
+        "detail": "",
+        "seconds": 0.0
+      },
+      {
+        "name": "echo_empty_argument",
+        "pass": true,
+        "detail": "",
+        "seconds": 0.0
+      },
+      {
+        "name": "echo_all_byte_values",
+        "pass": true,
+        "detail": "",
+        "seconds": 0.0
+      },
+      {
+        "name": "echo_payload_containing_resp_syntax",
+        "pass": true,
+        "detail": "",
+        "seconds": 0.0
+      },
+      {
+        "name": "echo_one_mebibyte",
+        "pass": true,
+        "detail": "",
+        "seconds": 0.009
+      },
+      {
+        "name": "echo_zero_args_arity_error",
+        "pass": true,
+        "detail": "",
+        "seconds": 0.002
+      },
+      {
+        "name": "echo_two_args_arity_error",
+        "pass": true,
+        "detail": "",
+        "seconds": 0.0
+      },
+      {
+        "name": "echo_mixed_case_name",
+        "pass": true,
+        "detail": "",
+        "seconds": 0.0
+      },
+      {
+        "name": "set_reply_ok_then_get",
+        "pass": true,
+        "detail": "",
+        "seconds": 0.0
+      },
+      {
+        "name": "get_absent_key_is_null_bulk",
+        "pass": true,
+        "detail": "",
+        "seconds": 0.0
+      },
+      {
+        "name": "set_repeated_overwrite_keeps_last",
+        "pass": true,
+        "detail": "",
+        "seconds": 0.0
+      },
+      {
+        "name": "set_empty_string_value_is_not_nil",
+        "pass": true,
+        "detail": "",
+        "seconds": 0.0
+      },
+      {
+        "name": "empty_string_key_is_valid",
+        "pass": true,
+        "detail": "",
+        "seconds": 0.0
+      },
+      {
+        "name": "keys_are_case_sensitive",
+        "pass": true,
+        "detail": "",
+        "seconds": 0.0
+      },
+      {
+        "name": "binary_key_every_byte",
+        "pass": true,
+        "detail": "",
+        "seconds": 0.0
+      },
+      {
+        "name": "binary_value_every_byte_repeated",
+        "pass": true,
+        "detail": "",
+        "seconds": 0.0
+      },
+      {
+        "name": "value_with_embedded_crlf_and_resp_markers",
+        "pass": true,
+        "detail": "",
+        "seconds": 0.0
+      },
+      {
+        "name": "keys_differing_only_after_nul_are_distinct",
+        "pass": true,
+        "detail": "",
+        "seconds": 0.0
+      },
+      {
+        "name": "utf8_key_and_value",
+        "pass": true,
+        "detail": "",
+        "seconds": 0.0
+      },
+      {
+        "name": "two_mebibyte_value_roundtrip",
+        "pass": true,
+        "detail": "",
+        "seconds": 0.017
+      },
+      {
+        "name": "integer_like_values_preserved_verbatim",
+        "pass": true,
+        "detail": "",
+        "seconds": 0.001
+      },
+      {
+        "name": "one_thousand_distinct_keys",
+        "pass": true,
+        "detail": "",
+        "seconds": 0.013
+      },
+      {
+        "name": "set_get_del_mixed_case_command_names",
+        "pass": true,
+        "detail": "",
+        "seconds": 0.0
+      },
+      {
+        "name": "get_zero_args_arity_error",
+        "pass": true,
+        "detail": "",
+        "seconds": 0.0
+      },
+      {
+        "name": "get_two_args_arity_error",
+        "pass": true,
+        "detail": "",
+        "seconds": 0.001
+      },
+      {
+        "name": "set_zero_and_one_args_arity_error",
+        "pass": true,
+        "detail": "",
+        "seconds": 0.001
+      },
+      {
+        "name": "set_unknown_trailing_option_rejected",
+        "pass": true,
+        "detail": "",
+        "seconds": 0.0
+      },
+      {
+        "name": "rejected_set_leaves_existing_value",
+        "pass": true,
+        "detail": "",
+        "seconds": 0.0
+      },
+      {
+        "name": "del_existing_returns_one",
+        "pass": true,
+        "detail": "",
+        "seconds": 0.0
+      },
+      {
+        "name": "del_missing_returns_zero",
+        "pass": true,
+        "detail": "",
+        "seconds": 0.0
+      },
+      {
+        "name": "del_counts_only_existing_keys",
+        "pass": true,
+        "detail": "",
+        "seconds": 0.0
+      },
+      {
+        "name": "del_repeated_key_counted_once",
+        "pass": true,
+        "detail": "",
+        "seconds": 0.0
+      },
+      {
+        "name": "del_two_hundred_keys_one_call",
+        "pass": true,
+        "detail": "",
+        "seconds": 0.003
+      },
+      {
+        "name": "del_binary_key",
+        "pass": true,
+        "detail": "",
+        "seconds": 0.0
+      },
+      {
+        "name": "del_then_recreate",
+        "pass": true,
+        "detail": "",
+        "seconds": 0.0
+      },
+      {
+        "name": "del_zero_args_arity_error",
+        "pass": true,
+        "detail": "",
+        "seconds": 0.0
+      },
+      {
+        "name": "px_value_visible_then_gone",
+        "pass": true,
+        "detail": "",
+        "seconds": 0.501
+      },
+      {
+        "name": "ex_value_visible_then_gone",
+        "pass": true,
+        "detail": "",
+        "seconds": 1.402
+      },
+      {
+        "name": "ex_px_keywords_case_insensitive",
+        "pass": true,
+        "detail": "",
+        "seconds": 0.451
+      },
+      {
+        "name": "long_ttl_keys_persist_across_reads",
+        "pass": true,
+        "detail": "",
+        "seconds": 0.302
+      },
+      {
+        "name": "plain_set_removes_existing_ttl",
+        "pass": true,
+        "detail": "",
+        "seconds": 0.501
+      },
+      {
+        "name": "shorter_ttl_replaces_longer",
+        "pass": true,
+        "detail": "",
+        "seconds": 0.451
+      },
+      {
+        "name": "longer_ttl_replaces_shorter",
+        "pass": true,
+        "detail": "",
+        "seconds": 0.451
+      },
+      {
+        "name": "expired_key_del_returns_zero",
+        "pass": true,
+        "detail": "",
+        "seconds": 0.351
+      },
+      {
+        "name": "del_mixed_live_and_expired_counts_live_only",
+        "pass": true,
+        "detail": "",
+        "seconds": 0.351
+      },
+      {
+        "name": "expired_key_invisible_to_other_connection",
+        "pass": true,
+        "detail": "",
+        "seconds": 0.401
+      },
+      {
+        "name": "set_on_expired_key_starts_fresh_without_ttl",
+        "pass": true,
+        "detail": "",
+        "seconds": 0.601
+      },
+      {
+        "name": "set_with_ttl_on_expired_key",
+        "pass": true,
+        "detail": "",
+        "seconds": 0.801
+      },
+      {
+        "name": "del_removes_ttl_key_before_expiry",
+        "pass": true,
+        "detail": "",
+        "seconds": 0.0
+      },
+      {
+        "name": "rejected_set_keeps_existing_ttl",
+        "pass": true,
+        "detail": "",
+        "seconds": 0.501
+      },
+      {
+        "name": "independent_ttls_per_key",
+        "pass": true,
+        "detail": "",
+        "seconds": 0.351
+      },
+      {
+        "name": "ex_zero_invalid_expire_time",
+        "pass": true,
+        "detail": "",
+        "seconds": 0.001
+      },
+      {
+        "name": "px_zero_invalid_expire_time",
+        "pass": true,
+        "detail": "",
+        "seconds": 0.0
+      },
+      {
+        "name": "negative_ex_and_px_invalid_expire_time",
+        "pass": true,
+        "detail": "",
+        "seconds": 0.0
+      },
+      {
+        "name": "ex_seconds_overflow_invalid_expire_time",
+        "pass": true,
+        "detail": "",
+        "seconds": 0.0
+      },
+      {
+        "name": "px_absolute_overflow_invalid_expire_time",
+        "pass": true,
+        "detail": "",
+        "seconds": 0.0
+      },
+      {
+        "name": "ex_px_non_numeric_rejected",
+        "pass": true,
+        "detail": "",
+        "seconds": 0.0
+      },
+      {
+        "name": "ex_px_fractional_rejected",
+        "pass": true,
+        "detail": "",
+        "seconds": 0.0
+      },
+      {
+        "name": "ex_value_beyond_int64_rejected",
+        "pass": true,
+        "detail": "",
+        "seconds": 0.0
+      },
+      {
+        "name": "ex_or_px_without_value_rejected",
+        "pass": true,
+        "detail": "",
+        "seconds": 0.0
+      },
+      {
+        "name": "ex_then_px_rejected",
+        "pass": true,
+        "detail": "",
+        "seconds": 0.0
+      },
+      {
+        "name": "px_then_ex_rejected",
+        "pass": true,
+        "detail": "",
+        "seconds": 0.0
+      },
+      {
+        "name": "option_after_valid_ex_rejected",
+        "pass": true,
+        "detail": "",
+        "seconds": 0.0
+      },
+      {
+        "name": "unknown_command_without_args",
+        "pass": true,
+        "detail": "",
+        "seconds": 0.0
+      },
+      {
+        "name": "unknown_command_with_args",
+        "pass": true,
+        "detail": "",
+        "seconds": 0.0
+      },
+      {
+        "name": "empty_command_name_is_error",
+        "pass": true,
+        "detail": "",
+        "seconds": 0.0
+      },
+      {
+        "name": "connection_usable_after_each_error_kind",
+        "pass": true,
+        "detail": "",
+        "seconds": 0.0
+      },
+      {
+        "name": "errors_inside_pipeline_do_not_desync",
+        "pass": true,
+        "detail": "",
+        "seconds": 0.0
+      },
+      {
+        "name": "raw_bytes_simple_int_nil_bulk",
+        "pass": true,
+        "detail": "",
+        "seconds": 0.0
+      },
+      {
+        "name": "raw_error_reply_shape",
+        "pass": true,
+        "detail": "",
+        "seconds": 0.0
+      },
+      {
+        "name": "raw_del_multi_digit_integer",
+        "pass": true,
+        "detail": "",
+        "seconds": 0.0
+      },
+      {
+        "name": "pipeline_mixed_commands_single_write",
+        "pass": true,
+        "detail": "",
+        "seconds": 0.0
+      },
+      {
+        "name": "pipeline_five_hundred_pings",
+        "pass": true,
+        "detail": "",
+        "seconds": 0.002
+      },
+      {
+        "name": "request_sent_one_byte_at_a_time",
+        "pass": true,
+        "detail": "",
+        "seconds": 0.157
+      },
+      {
+        "name": "split_inside_bulk_payload_and_between_commands",
+        "pass": true,
+        "detail": "",
+        "seconds": 0.121
+      },
+      {
+        "name": "large_pipeline_of_large_values",
+        "pass": true,
+        "detail": "",
+        "seconds": 0.011
+      },
+      {
+        "name": "keyspace_shared_between_connections",
+        "pass": true,
+        "detail": "",
+        "seconds": 0.001
+      },
+      {
+        "name": "fifty_parallel_clients_threaded",
+        "pass": true,
+        "detail": "",
+        "seconds": 0.174
+      },
+      {
+        "name": "concurrent_writers_same_key_last_write_wins",
+        "pass": true,
+        "detail": "",
+        "seconds": 0.012
+      },
+      {
+        "name": "concurrent_deleters_count_exactly_once",
+        "pass": true,
+        "detail": "",
+        "seconds": 0.005
+      },
+      {
+        "name": "idle_connection_kept_open",
+        "pass": true,
+        "detail": "",
+        "seconds": 1.001
+      },
+      {
+        "name": "server_survives_client_abort_mid_request",
+        "pass": true,
+        "detail": "",
+        "seconds": 0.201
+      },
+      {
+        "name": "server_survives_client_closing_with_unread_replies",
+        "pass": true,
+        "detail": "",
+        "seconds": 0.301
+      },
+      {
+        "name": "many_sequential_connections",
+        "pass": true,
+        "detail": "",
+        "seconds": 0.008
+      }
+    ],
+    "pass_rate": 1.0
+  },
+  "regression": {
+    "passed": 43,
+    "total": 43,
+    "results": [
+      {
+        "name": "ping_no_arg",
+        "pass": true,
+        "detail": "",
+        "seconds": 0.001
+      },
+      {
+        "name": "ping_with_arg_returns_bulk",
+        "pass": true,
+        "detail": "",
+        "seconds": 0.0
+      },
+      {
+        "name": "ping_too_many_args",
+        "pass": true,
+        "detail": "",
+        "seconds": 0.0
+      },
+      {
+        "name": "command_names_case_insensitive",
+        "pass": true,
+        "detail": "",
+        "seconds": 0.0
+      },
+      {
+        "name": "echo_basic",
+        "pass": true,
+        "detail": "",
+        "seconds": 0.0
+      },
+      {
+        "name": "echo_empty_string",
+        "pass": true,
+        "detail": "",
+        "seconds": 0.0
+      },
+      {
+        "name": "echo_binary",
+        "pass": true,
+        "detail": "",
+        "seconds": 0.0
+      },
+      {
+        "name": "echo_no_args",
+        "pass": true,
+        "detail": "",
+        "seconds": 0.0
+      },
+      {
+        "name": "echo_too_many_args",
+        "pass": true,
+        "detail": "",
+        "seconds": 0.0
+      },
+      {
+        "name": "set_get_roundtrip",
+        "pass": true,
+        "detail": "",
+        "seconds": 0.0
+      },
+      {
+        "name": "get_missing_is_nil",
+        "pass": true,
+        "detail": "",
+        "seconds": 0.0
+      },
+      {
+        "name": "set_overwrites",
+        "pass": true,
+        "detail": "",
+        "seconds": 0.0
+      },
+      {
+        "name": "set_empty_value",
+        "pass": true,
+        "detail": "",
+        "seconds": 0.0
+      },
+      {
+        "name": "set_get_binary_value",
+        "pass": true,
+        "detail": "",
+        "seconds": 0.0
+      },
+      {
+        "name": "set_get_binary_key",
+        "pass": true,
+        "detail": "",
+        "seconds": 0.0
+      },
+      {
+        "name": "set_get_large_value",
+        "pass": true,
+        "detail": "",
+        "seconds": 0.003
+      },
+      {
+        "name": "numeric_like_values_are_strings",
+        "pass": true,
+        "detail": "",
+        "seconds": 0.002
+      },
+      {
+        "name": "get_wrong_arity",
+        "pass": true,
+        "detail": "",
+        "seconds": 0.0
+      },
+      {
+        "name": "set_wrong_arity",
+        "pass": true,
+        "detail": "",
+        "seconds": 0.0
+      },
+      {
+        "name": "set_unknown_option_is_syntax_error",
+        "pass": true,
+        "detail": "",
+        "seconds": 0.0
+      },
+      {
+        "name": "keys_shared_across_connections",
+        "pass": true,
+        "detail": "",
+        "seconds": 0.0
+      },
+      {
+        "name": "del_existing_and_missing",
+        "pass": true,
+        "detail": "",
+        "seconds": 0.0
+      },
+      {
+        "name": "del_multiple_keys_counts",
+        "pass": true,
+        "detail": "",
+        "seconds": 0.0
+      },
+      {
+        "name": "del_same_key_twice_in_one_call",
+        "pass": true,
+        "detail": "",
+        "seconds": 0.0
+      },
+      {
+        "name": "del_no_args",
+        "pass": true,
+        "detail": "",
+        "seconds": 0.0
+      },
+      {
+        "name": "set_px_expires",
+        "pass": true,
+        "detail": "",
+        "seconds": 0.4
+      },
+      {
+        "name": "set_ex_expires",
+        "pass": true,
+        "detail": "",
+        "seconds": 1.301
+      },
+      {
+        "name": "set_ex_px_options_case_insensitive",
+        "pass": true,
+        "detail": "",
+        "seconds": 0.401
+      },
+      {
+        "name": "ex_long_ttl_not_expired",
+        "pass": true,
+        "detail": "",
+        "seconds": 0.201
+      },
+      {
+        "name": "plain_set_clears_ttl",
+        "pass": true,
+        "detail": "",
+        "seconds": 0.401
+      },
+      {
+        "name": "set_with_ttl_overwrites_old_ttl",
+        "pass": true,
+        "detail": "",
+        "seconds": 0.401
+      },
+      {
+        "name": "del_on_expired_key_returns_zero",
+        "pass": true,
+        "detail": "",
+        "seconds": 0.301
+      },
+      {
+        "name": "set_after_expiry_creates_fresh_key",
+        "pass": true,
+        "detail": "",
+        "seconds": 0.502
+      },
+      {
+        "name": "ex_non_integer_is_error",
+        "pass": true,
+        "detail": "",
+        "seconds": 0.001
+      },
+      {
+        "name": "px_non_integer_is_error",
+        "pass": true,
+        "detail": "",
+        "seconds": 0.0
+      },
+      {
+        "name": "ex_zero_or_negative_is_error",
+        "pass": true,
+        "detail": "",
+        "seconds": 0.0
+      },
+      {
+        "name": "ex_missing_value_is_syntax_error",
+        "pass": true,
+        "detail": "",
+        "seconds": 0.0
+      },
+      {
+        "name": "ex_and_px_together_is_syntax_error",
+        "pass": true,
+        "detail": "",
+        "seconds": 0.0
+      },
+      {
+        "name": "unknown_command_error",
+        "pass": true,
+        "detail": "",
+        "seconds": 0.0
+      },
+      {
+        "name": "connection_survives_errors",
+        "pass": true,
+        "detail": "",
+        "seconds": 0.0
+      },
+      {
+        "name": "pipelined_commands_in_one_write",
+        "pass": true,
+        "detail": "",
+        "seconds": 0.0
+      },
+      {
+        "name": "request_split_across_writes",
+        "pass": true,
+        "detail": "",
+        "seconds": 0.144
+      },
+      {
+        "name": "many_concurrent_clients",
+        "pass": true,
+        "detail": "",
+        "seconds": 0.003
+      }
+    ],
+    "pass_rate": 1.0
+  },
+  "smoke": {
+    "passed": 6,
+    "total": 6,
+    "results": [
+      {
+        "name": "ping",
+        "pass": true,
+        "detail": ""
+      },
+      {
+        "name": "echo",
+        "pass": true,
+        "detail": ""
+      },
+      {
+        "name": "set",
+        "pass": true,
+        "detail": ""
+      },
+      {
+        "name": "get",
+        "pass": true,
+        "detail": ""
+      },
+      {
+        "name": "del",
+        "pass": true,
+        "detail": ""
+      },
+      {
+        "name": "get_after_del",
+        "pass": true,
+        "detail": ""
+      }
+    ],
+    "pass_rate": 1.0
+  },
+  "suite_run": {
+    "exit_code": 0,
+    "timed_out": false,
+    "seconds": 13.752,
+    "output_tail": "SERVER_ALIVE_AFTER hidden\nSERVER_ALIVE_AFTER smoke\nSERVER_ALIVE_AFTER regression\nSUITES_DONE\n"
+  },
+  "server_alive_after_hidden": true,
+  "server_started_for_hidden": true,
+  "server_alive_after_regression": true,
+  "server_started_for_regression": true,
+  "server_alive_after_smoke": true,
+  "server_started_for_smoke": true
+}
