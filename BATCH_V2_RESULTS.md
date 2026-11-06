@@ -30,3 +30,7 @@ Full machine-readable: `BATCH_V2_RESULTS.json`. Per-run: `runs/<id>/{manifest,sc
 ## Flagship correction (in progress)
 
 See [`FLAGSHIP_COMPARISON_IN_PROGRESS.md`](FLAGSHIP_COMPARISON_IN_PROGRESS.md) for Opus 5.5 + DeepSeek V4 Pro completed rows and pending GPT-5.5 Pro.
+
+## Flagship correction
+
+See [`FLAGSHIP_COMPARISON.md`](FLAGSHIP_COMPARISON.md) (Opus 5.5 + DeepSeek V4 Pro complete; GPT-5.5 Pro **user_terminated** incomplete, not scored).

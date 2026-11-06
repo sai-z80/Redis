@@ -1,0 +1,54 @@
+{
+  "run_id": "b2f-gpt-5.5-pro-r1",
+  "status": "user_terminated",
+  "completed": false,
+  "scored": false,
+  "stop_class": "user_terminated",
+  "stop_reason": "user_terminated",
+  "stop_detail": "Sai explicitly stopped the run (~2026-11-06T22:06:00Z Europe/London / GMT). Process PID 123508 verified absent after stop. Not model_done; no canonical score.",
+  "terminated_at_approx": "2026-11-06T22:06:00Z",
+  "termination_authority": "Sai t210u / prior stop; publication authorized pt210u",
+  "model_id": "openai/gpt-5.5-pro",
+  "api": "responses",
+  "api_endpoint_path": "/api/v1/responses",
+  "reasoning_effort": "high",
+  "protocol": "batch-v2-completion-oriented",
+  "protocol_amendment": "flagship-correction-1",
+  "caps": {
+    "max_iterations": 150,
+    "max_tokens": 65536,
+    "max_tokens_field": "max_output_tokens",
+    "wall_timeout_s": 7200,
+    "request_timeout_s": 1800,
+    "temperature": null
+  },
+  "started_at": "2026-11-06T21:33:16Z",
+  "last_transcript_event_at": "2026-11-06T22:04:47Z",
+  "last_completed_model_iteration": 24,
+  "last_tool_name": "run_shell",
+  "partial_cost": {
+    "billed_from_completed_responses_usd": 21.74019,
+    "basis": "sum of usage.cost on 24 completed Responses API turns recorded in transcript (exact for those completed generations)",
+    "tokens_in_sum": 615551,
+    "tokens_out_sum": 18187,
+    "tokens_reasoning_sum": 11607,
+    "account_total_usage_usd_at_publish_read": 27.778810559,
+    "account_usage_note": "OpenRouter key total usage is NOT the run cost; includes batch-v2, other flagships, probes, and any other spend on the key.",
+    "possible_later_billing_note": "An in-flight HTTP request may have been open at kill time (~22:06Z). That generation may bill later and is NOT included in 21.74019 if it never completed into the transcript.",
+    "not_a_final_cost": true
+  },
+  "artifacts": {
+    "transcript": "transcript.jsonl (sanitized paths; encrypted reasoning blobs omitted for size)",
+    "workspace_sources": [
+      "go.mod",
+      "main.go"
+    ],
+    "omitted": [
+      "redis-mini binary",
+      "gocache",
+      "workspace/tests copies",
+      "scores.json (none \u2014 not scored)"
+    ]
+  },
+  "caveat": "INCOMPLETE. Do not rank this model from this row. n=1 exploratory experiment overall."
+}
