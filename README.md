@@ -10,6 +10,18 @@ C source and asked to port a small part of it (RESP2 + `PING`/`ECHO`/`SET`/`GET`
 A later, larger experiment would compare this with other ways of building the same software. That comparison has **not**
 been run, and this repository says nothing about it.
 
+
+<!-- BATCH_V2_SECTION -->
+## Batch v2 multi-model comparison (exploratory, n=1)
+
+See **[`BATCH_V2_RESULTS.md`](BATCH_V2_RESULTS.md)** and **[`experiment/batch-v2/`](experiment/batch-v2/)** for six completed Arm A vibe runs under protocol `batch-v2-completion-oriented`.
+
+**Important methodology notes:**
+- The completed slate is **not** the corrected current-flagship set (includes GPT-5.4 / Claude Opus 4.6 / DeepSeek v3.2). Flagship correction (**Claude Opus 5.5**, **GPT-5.5 Pro**, **DeepSeek V4 Pro**) is **in progress**; results will be added when finished.
+- Reused Gemini / Grok / Kimi rows used **default reasoning** and `max_tokens=8192` — do not treat as max-reasoning.
+- **Tests:** upstream Redis tests are public; this repo already publishes smoke + a regression suite derived from the earlier pilot hidden suite. The **fresh batch-v2 90-test scoring oracle is withheld** (failure names may appear in tables). Private oracle ≠ contamination-free.
+- n=1, Arm A only, no 8090. Cost is an outcome, not a stop.
+
 ## Important: this released test suite is now PUBLIC
 
 The files under `experiment/tests/hidden/` were a withheld scoring oracle for the pilot run recorded here.

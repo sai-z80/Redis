@@ -1,0 +1,56 @@
+{
+  "label": "batch-v2-arm-a-port-attempt",
+  "protocol": "batch-v2-completion-oriented",
+  "arm": "A",
+  "model_id": "deepseek/deepseek-v3.2",
+  "openrouter": {
+    "base_url": "https://openrouter.ai/api/v1",
+    "api_key_env": "OPENROUTER_API_KEY",
+    "provider_routing": null,
+    "request_timeout_s": 300,
+    "http_retries": 3,
+    "retry_backoff_s": 5
+  },
+  "caps": {
+    "max_iterations": 150,
+    "max_tokens": 8192,
+    "wall_timeout_s": 7200,
+    "temperature": null
+  },
+  "cost_accounting": {
+    "_note": "Cost is an OUTCOME, never a stop condition in the scored path. There is no per-run or per-batch cost cap in this config. The optional internal protective guard is the env var SF_BATCH_GUARD_USD (unset by default; supervisor-only; not part of the published protocol).",
+    "fallback_estimate_pricing_usd_per_mtok": {
+      "_note": "Used ONLY to record an estimate when a response lacks usage.cost; never used to stop a run.",
+      "input": 1.0,
+      "output": 2.0
+    }
+  },
+  "tools": {
+    "shell_timeout_default_s": 120,
+    "shell_timeout_max_s": 300,
+    "max_tool_output_chars": 20000,
+    "max_read_bytes": 200000,
+    "max_write_bytes": 1000000
+  },
+  "paths": {
+    "system_prompt": "prompts/arm-a/system.md",
+    "task_prompt": "prompts/arm-a/port.batch-v2.md",
+    "upstream_dir": "upstream",
+    "smoke_dir": "tests/smoke",
+    "regression_dir": "tests/regression",
+    "hidden_dir": "tests/hidden",
+    "runs_dir": "runs",
+    "smoke_script": "smoke.py",
+    "regression_script": "run_regression.py",
+    "hidden_script": "oracle_batch_v2.py",
+    "reference_validation": "tests/REFERENCE_VALIDATION_BATCH_V2.json"
+  },
+  "scoring": {
+    "build_cmd": "go build -o redis-mini .",
+    "binary": "redis-mini",
+    "port": 6380,
+    "build_timeout_s": 300,
+    "server_start_timeout_s": 10,
+    "suite_timeout_s": 1500
+  }
+}
