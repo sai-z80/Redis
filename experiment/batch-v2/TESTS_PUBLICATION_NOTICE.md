@@ -10,4 +10,4 @@
 - Contaminaton note: contestants could in principle consult public Redis tests / docs / this repo’s published suites. Fresh-90 being private does **not** make the task contamination-free.
 
 ## Flagship correction status
-Corrected flagship runs (`anthropic/claude-opus-5.5`, `openai/gpt-5.5-pro`, `deepseek/deepseek-v4-pro-0813`) are **in progress** and will be added in a follow-up commit when finished. Do not treat the current six-row batch-v2 table as the final flagship comparison.
+Corrected flagship runs (`anthropic/claude-opus-5.5`, `openai/gpt-5.5-pro`, `deepseek/deepseek-v4-pro-0813`) have finished: Opus 5.5 and DeepSeek V4 Pro were scored; GPT-5.5 Pro was user-terminated and not scored (see `FLAGSHIP_COMPARISON.md`). Do not treat the current six-row batch-v2 table as the final flagship comparison.
