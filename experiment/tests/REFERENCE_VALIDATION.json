@@ -1,0 +1,69 @@
+{
+  "validated_at": "2026-11-06T19:59:01Z",
+  "redis_version": "Redis server v=7.2.17 sha=00000000:0 malloc=libc bits=64 build=a995b17c51e5f94c",
+  "reference_binary_sha256": "559705dce766662ad4b0f2aa89fcd970ca1ef7675be2941f1bea8f2bcf46ca92",
+  "repeats": 1,
+  "all_green": true,
+  "smoke": {
+    "passed": 6,
+    "total": 6,
+    "pass_counts_per_repeat": [
+      6
+    ],
+    "tree_sha256": "5e4eb28cca5e2a00265e36eba7894a4b48730e9344049d086d93873b29b51ed7"
+  },
+  "hidden": {
+    "passed": 43,
+    "total": 43,
+    "pass_counts_per_repeat": [
+      43
+    ],
+    "tree_sha256": "7c62de7184c67e91f8c69e59324c7b0d2983c44c24ea63c4afbd6bcbaddf42fc",
+    "tests": [
+      "ping_no_arg",
+      "ping_with_arg_returns_bulk",
+      "ping_too_many_args",
+      "command_names_case_insensitive",
+      "echo_basic",
+      "echo_empty_string",
+      "echo_binary",
+      "echo_no_args",
+      "echo_too_many_args",
+      "set_get_roundtrip",
+      "get_missing_is_nil",
+      "set_overwrites",
+      "set_empty_value",
+      "set_get_binary_value",
+      "set_get_binary_key",
+      "set_get_large_value",
+      "numeric_like_values_are_strings",
+      "get_wrong_arity",
+      "set_wrong_arity",
+      "set_unknown_option_is_syntax_error",
+      "keys_shared_across_connections",
+      "del_existing_and_missing",
+      "del_multiple_keys_counts",
+      "del_same_key_twice_in_one_call",
+      "del_no_args",
+      "set_px_expires",
+      "set_ex_expires",
+      "set_ex_px_options_case_insensitive",
+      "ex_long_ttl_not_expired",
+      "plain_set_clears_ttl",
+      "set_with_ttl_overwrites_old_ttl",
+      "del_on_expired_key_returns_zero",
+      "set_after_expiry_creates_fresh_key",
+      "ex_non_integer_is_error",
+      "px_non_integer_is_error",
+      "ex_zero_or_negative_is_error",
+      "ex_missing_value_is_syntax_error",
+      "ex_and_px_together_is_syntax_error",
+      "unknown_command_error",
+      "connection_survives_errors",
+      "pipelined_commands_in_one_write",
+      "request_split_across_writes",
+      "many_concurrent_clients"
+    ]
+  },
+  "failures": []
+}

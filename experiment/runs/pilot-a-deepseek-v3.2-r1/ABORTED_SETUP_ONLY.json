@@ -1,0 +1,25 @@
+{
+  "status": "ABORTED_SETUP_ONLY",
+  "reason": "Paused mid-run for QA of fairness/source gates after Sai steering. Not a scored result. Do not treat as Arm A outcome.",
+  "aborted_at": "2026-11-06T20:00:39Z",
+  "model_id": "deepseek/deepseek-v3.2",
+  "iterations_before_abort": 13,
+  "cost_usd_usage_sum_partial": 0.011617,
+  "generation_ids_partial": [
+    "gen-1793995153-kD9bdzIwZdrmOvC7Z59k",
+    "gen-1793995155-SdYABSbInK2oP3W1nx9R",
+    "gen-1793995156-k2FtUwUoBqB4iOPzxOb1",
+    "gen-1793995158-5gPi6g5USoVnA9uu1uwU",
+    "gen-1793995160-W46ET1U2AaatHC3mKWB7",
+    "gen-1793995162-tmlavx9WT3Zf90dazwv4",
+    "gen-1793995163-eIeWSwMjATu02w7xiggZ",
+    "gen-1793995165-I9XOXvxZVq3t7B1CAcGb",
+    "gen-1793995168-ON4sumz02PswT7ZFImEb",
+    "gen-1793995171-kdiBsztEDl8N1OSPg9Uh",
+    "gen-1793995174-aubWrdSHv8Jbrw4F8Sze",
+    "gen-1793995176-KcMaqG7PcA4W8KojcWiv",
+    "gen-1793995177-U86yWOBphZ4cVaA0eZDv"
+  ],
+  "scored": false,
+  "publication": false
+}

@@ -1,0 +1,320 @@
+{
+  "run_id": "pilot-a-deepseek-v3.2-r2",
+  "scored_at": "2026-11-06T20:11:07Z",
+  "model_id": "deepseek/deepseek-v3.2",
+  "build_ok": true,
+  "build_output_tail": "",
+  "freeze_ok": true,
+  "freeze_problems": [],
+  "workspace_sha256": "497123d28368640b933662a7fc8052d1353c352046aa9c19fe4c2f63f08060e8",
+  "smoke_tests_unmodified": true,
+  "smoke": {
+    "passed": 6,
+    "total": 6,
+    "results": [
+      {
+        "name": "ping",
+        "pass": true,
+        "detail": ""
+      },
+      {
+        "name": "echo",
+        "pass": true,
+        "detail": ""
+      },
+      {
+        "name": "set",
+        "pass": true,
+        "detail": ""
+      },
+      {
+        "name": "get",
+        "pass": true,
+        "detail": ""
+      },
+      {
+        "name": "del",
+        "pass": true,
+        "detail": ""
+      },
+      {
+        "name": "get_after_del",
+        "pass": true,
+        "detail": ""
+      }
+    ],
+    "pass_rate": 1.0
+  },
+  "hidden": {
+    "passed": 40,
+    "total": 43,
+    "results": [
+      {
+        "name": "ping_no_arg",
+        "pass": true,
+        "detail": "",
+        "seconds": 0.001
+      },
+      {
+        "name": "ping_with_arg_returns_bulk",
+        "pass": true,
+        "detail": "",
+        "seconds": 0.0
+      },
+      {
+        "name": "ping_too_many_args",
+        "pass": true,
+        "detail": "",
+        "seconds": 0.0
+      },
+      {
+        "name": "command_names_case_insensitive",
+        "pass": true,
+        "detail": "",
+        "seconds": 0.0
+      },
+      {
+        "name": "echo_basic",
+        "pass": true,
+        "detail": "",
+        "seconds": 0.0
+      },
+      {
+        "name": "echo_empty_string",
+        "pass": true,
+        "detail": "",
+        "seconds": 0.0
+      },
+      {
+        "name": "echo_binary",
+        "pass": true,
+        "detail": "",
+        "seconds": 0.0
+      },
+      {
+        "name": "echo_no_args",
+        "pass": true,
+        "detail": "",
+        "seconds": 0.0
+      },
+      {
+        "name": "echo_too_many_args",
+        "pass": true,
+        "detail": "",
+        "seconds": 0.0
+      },
+      {
+        "name": "set_get_roundtrip",
+        "pass": true,
+        "detail": "",
+        "seconds": 0.0
+      },
+      {
+        "name": "get_missing_is_nil",
+        "pass": true,
+        "detail": "",
+        "seconds": 0.0
+      },
+      {
+        "name": "set_overwrites",
+        "pass": true,
+        "detail": "",
+        "seconds": 0.0
+      },
+      {
+        "name": "set_empty_value",
+        "pass": true,
+        "detail": "",
+        "seconds": 0.0
+      },
+      {
+        "name": "set_get_binary_value",
+        "pass": true,
+        "detail": "",
+        "seconds": 0.0
+      },
+      {
+        "name": "set_get_binary_key",
+        "pass": true,
+        "detail": "",
+        "seconds": 0.0
+      },
+      {
+        "name": "set_get_large_value",
+        "pass": true,
+        "detail": "",
+        "seconds": 0.005
+      },
+      {
+        "name": "numeric_like_values_are_strings",
+        "pass": true,
+        "detail": "",
+        "seconds": 0.001
+      },
+      {
+        "name": "get_wrong_arity",
+        "pass": true,
+        "detail": "",
+        "seconds": 0.0
+      },
+      {
+        "name": "set_wrong_arity",
+        "pass": true,
+        "detail": "",
+        "seconds": 0.0
+      },
+      {
+        "name": "set_unknown_option_is_syntax_error",
+        "pass": true,
+        "detail": "",
+        "seconds": 0.0
+      },
+      {
+        "name": "keys_shared_across_connections",
+        "pass": true,
+        "detail": "",
+        "seconds": 0.0
+      },
+      {
+        "name": "del_existing_and_missing",
+        "pass": true,
+        "detail": "",
+        "seconds": 0.0
+      },
+      {
+        "name": "del_multiple_keys_counts",
+        "pass": true,
+        "detail": "",
+        "seconds": 0.0
+      },
+      {
+        "name": "del_same_key_twice_in_one_call",
+        "pass": true,
+        "detail": "",
+        "seconds": 0.0
+      },
+      {
+        "name": "del_no_args",
+        "pass": true,
+        "detail": "",
+        "seconds": 0.0
+      },
+      {
+        "name": "set_px_expires",
+        "pass": true,
+        "detail": "",
+        "seconds": 0.401
+      },
+      {
+        "name": "set_ex_expires",
+        "pass": true,
+        "detail": "",
+        "seconds": 1.301
+      },
+      {
+        "name": "set_ex_px_options_case_insensitive",
+        "pass": true,
+        "detail": "",
+        "seconds": 0.401
+      },
+      {
+        "name": "ex_long_ttl_not_expired",
+        "pass": true,
+        "detail": "",
+        "seconds": 0.201
+      },
+      {
+        "name": "plain_set_clears_ttl",
+        "pass": true,
+        "detail": "",
+        "seconds": 0.401
+      },
+      {
+        "name": "set_with_ttl_overwrites_old_ttl",
+        "pass": true,
+        "detail": "",
+        "seconds": 0.401
+      },
+      {
+        "name": "del_on_expired_key_returns_zero",
+        "pass": false,
+        "detail": "want ('int', 0) got ('int', 1)",
+        "seconds": 0.301
+      },
+      {
+        "name": "set_after_expiry_creates_fresh_key",
+        "pass": true,
+        "detail": "",
+        "seconds": 0.501
+      },
+      {
+        "name": "ex_non_integer_is_error",
+        "pass": true,
+        "detail": "",
+        "seconds": 0.0
+      },
+      {
+        "name": "px_non_integer_is_error",
+        "pass": true,
+        "detail": "",
+        "seconds": 0.0
+      },
+      {
+        "name": "ex_zero_or_negative_is_error",
+        "pass": false,
+        "detail": "error b'ERR value is not an integer or out of range' lacks 'invalid expire time'",
+        "seconds": 0.0
+      },
+      {
+        "name": "ex_missing_value_is_syntax_error",
+        "pass": true,
+        "detail": "",
+        "seconds": 0.0
+      },
+      {
+        "name": "ex_and_px_together_is_syntax_error",
+        "pass": false,
+        "detail": "want -ERR reply, got ('simple', b'OK')",
+        "seconds": 0.0
+      },
+      {
+        "name": "unknown_command_error",
+        "pass": true,
+        "detail": "",
+        "seconds": 0.0
+      },
+      {
+        "name": "connection_survives_errors",
+        "pass": true,
+        "detail": "",
+        "seconds": 0.0
+      },
+      {
+        "name": "pipelined_commands_in_one_write",
+        "pass": true,
+        "detail": "",
+        "seconds": 0.0
+      },
+      {
+        "name": "request_split_across_writes",
+        "pass": true,
+        "detail": "",
+        "seconds": 0.144
+      },
+      {
+        "name": "many_concurrent_clients",
+        "pass": true,
+        "detail": "",
+        "seconds": 0.002
+      }
+    ],
+    "pass_rate": 0.9302
+  },
+  "test_mode": false,
+  "suite_run": {
+    "exit_code": 0,
+    "timed_out": false,
+    "seconds": 4.164,
+    "output_tail": "SUITES_DONE\n"
+  }
+}

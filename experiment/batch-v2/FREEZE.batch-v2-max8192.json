@@ -1,0 +1,77 @@
+{
+  "label": "batch-v2-arm-a-port-attempt (frozen authoring artefacts; no contestant results)",
+  "protocol": "batch-v2-completion-oriented",
+  "frozen_at": "2026-11-06T20:30:48Z",
+  "redis_pin": {
+    "version": "7.2.17",
+    "commit": "83937c51afb53e1c69661c8e1533e0e19b896fe1",
+    "licence": "BSD-3-Clause",
+    "tarball_sha256": "c627dc8da3ded4d68279b1832733e45e3d8a8d1b2f6d24c55ffd2251e48a57b3",
+    "reference_binary_sha256": "559705dce766662ad4b0f2aa89fcd970ca1ef7675be2941f1bea8f2bcf46ca92"
+  },
+  "model_id_at_freeze": "deepseek/deepseek-v3.2",
+  "model_id_note": "model_id is the only config field excluded from config_sha256_sans_secrets; changing it (config or `agent_run --model`) does not break the freeze.",
+  "stop_rules": [
+    "model_done: assistant message with no tool calls",
+    "max_iterations: caps.max_iterations model turns (runaway-loop safeguard)",
+    "wall_timeout: caps.wall_timeout_s",
+    "harness_api_failure: exhausted retries / API error / sandbox or harness crash (logged as harness/API failure, not model failure)"
+  ],
+  "cost_is_stop_condition": false,
+  "cost_note": "Cost is an outcome: recorded every turn (usage.cost, generation API billed cost), never a stop condition. No per-run or per-batch cost cap is part of this protocol. Finite safeguards (iterations, wall time) do not guarantee completion.",
+  "internal_guard_note": "Optional env SF_BATCH_GUARD_USD (default unset) is an internal supervisor safeguard only (stop_reason=batch_guard_notify, exit 3). It is not a published budget or score cap and is not in config.json.",
+  "hashed": {
+    "scope_sha256": "a4e295ae8b40d1bc72dc9e31a36fdf59f3caf1a665910bf91ff61aacd2a3e588",
+    "prompt_system_sha256": "8ad677df0a66b3817b67bed0cba7223559ade1903bb37e66e9ebea7ef7560157",
+    "prompt_arm_a_sha256": "c0217da825cbcf7b5ebddbe58a4d36e46bfbf244cc62d4780b85d8f5305d279c",
+    "smoke_tree_sha256": "5e4eb28cca5e2a00265e36eba7894a4b48730e9344049d086d93873b29b51ed7",
+    "smoke_files": {
+      "smoke.py": "fc5b5bc90e0fd8ef1691400262eb368dcdca2f767e868f6d5b68793ed48c7b6e"
+    },
+    "regression_tree_sha256": "b8c66464e7fb9c1d7f6edfc32330f3ecb30dfce82007183f006bbf3ad71af96d",
+    "regression_files": {
+      "README.md": "f66468dfc3ba41f57030ebcf1f7c2fb4e7e3ee780c13ec5c81efe7ed75550da9",
+      "run_regression.py": "00aa7a8be389106905d7fcd219b32546c46b51f9156d3f786ee41cb995529528"
+    },
+    "hidden_tree_sha256": "bf495c98e07554744f4d5283d3d687d4ee6c040ee007781e43e1999aafd2a15c",
+    "hidden_files": {
+      "README.md": "bd61b6571d86c8019fd6642b97a4e5ecf87419e31b791023bd88779616c1e3fd",
+      "oracle_batch_v2.py": "2c4ed6d9fb3db3637747d64450a024745d00bf5832ae0e291a6c73964bb76897"
+    },
+    "config_sha256_sans_secrets": "63fcb252bae2cf7131f10fdd73624cc5c4026bc7b9f1d3987a4ae5f9afe648bf",
+    "upstream_tree_sha256": "9d4ca19b951ea9d27f7c4e68009f9c4620d9fae2a4348143782f48fa11a3b04e",
+    "harness_files": {
+      "__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "agent_run.py": "f8bed7abe342de9eb53dba447b029a2be91853ee4cb01753b07142d730654ba0",
+      "common.py": "4d3e79491a1015a0d01e8a15b2cfeae51363fb26bd63e7f71e184a081e550132",
+      "freeze.py": "4bbe2455f2a9f8685a0637f4392d9a0144f054abb88441139aea297760870747",
+      "score.py": "f1b3b938fc66729be7d917a52decbf03e1aa1644457506ddba372f19b48f0048",
+      "selftest.py": "83276b021a828e081186a97ef2d2493d19b7656723ec4e77563093ed30c44f09",
+      "tools.py": "1f97cb1080bdd0754c9bed3c54c74286ec3d7b1073b42e89d75950a62d0e76d7",
+      "validate_reference.py": "22f3ccc9c33ef0072a11072c76e610c941c50e23de3d40ecf94cbb65ff4abcb9"
+    },
+    "caps": {
+      "max_iterations": 150,
+      "max_tokens": 8192,
+      "wall_timeout_s": 7200,
+      "temperature": null
+    },
+    "protocol": "batch-v2-completion-oriented"
+  },
+  "reference_validation": {
+    "file": "tests/REFERENCE_VALIDATION_BATCH_V2.json",
+    "sha256": "bd0995c22536b0f1bbfae68f3dd93f574e779de2bd0bb4a8ce6611f06890e0ff",
+    "redis_version": "Redis server v=7.2.17 sha=00000000:0 malloc=libc bits=64 build=a995b17c51e5f94c",
+    "smoke": "6/6",
+    "regression": "43/43",
+    "hidden": "90/90",
+    "repeats": 3
+  },
+  "tests_validated_on_reference": true,
+  "scored_runs_allowed": true,
+  "contestant_runs_performed_at_freeze": 0,
+  "contestant_runs_note": "0 batch-v2 contestant runs at freeze. pilot-v1 runs (pilot-a-deepseek-v3.2-r1 aborted, -r2 scored under the old $1.50 cap and the old hidden suite) are historical and not part of batch-v2.",
+  "openrouter_spend_usd_at_freeze_batch_v2": 0.0,
+  "historical_freeze_note": "pilot-v1 FREEZE hashes are historical: see git/PR1 and the local copy history/FREEZE.pilot-v1.json. They do not apply to batch-v2.",
+  "authored_by": "Claude Code (authoring only; fixed artefacts). Loop/scoring owned by deterministic scripts."
+}

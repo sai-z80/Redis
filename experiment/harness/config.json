@@ -1,0 +1,49 @@
+{
+  "label": "pilot-smoke-arm-a-port-attempt",
+  "arm": "A",
+  "model_id": "deepseek/deepseek-v3.2",
+  "openrouter": {
+    "base_url": "https://openrouter.ai/api/v1",
+    "api_key_env": "OPENROUTER_API_KEY",
+    "provider_routing": null,
+    "request_timeout_s": 300,
+    "http_retries": 3,
+    "retry_backoff_s": 5
+  },
+  "caps": {
+    "max_iterations": 60,
+    "max_cost_usd": 1.50,
+    "max_tokens": 8192,
+    "wall_timeout_s": 3600,
+    "temperature": null
+  },
+  "cost_guard_pricing_usd_per_mtok": {
+    "_note": "CONSERVATIVE ESTIMATE used only for pre-call budget projection when usage.cost is absent; not a real price quote. Actual cost is taken from OpenRouter usage.cost and /api/v1/generation.",
+    "input": 1.00,
+    "output": 2.00
+  },
+  "tools": {
+    "shell_timeout_default_s": 120,
+    "shell_timeout_max_s": 300,
+    "max_tool_output_chars": 20000,
+    "max_read_bytes": 200000,
+    "max_write_bytes": 1000000
+  },
+  "paths": {
+    "system_prompt": "prompts/arm-a/system.md",
+    "task_prompt": "prompts/arm-a/port.md",
+    "upstream_dir": "upstream",
+    "smoke_dir": "tests/smoke",
+    "hidden_dir": "tests/hidden",
+    "runs_dir": "runs"
+  },
+  "scoring": {
+    "build_cmd": "go build -o redis-mini .",
+    "binary": "redis-mini",
+    "port": 6380,
+    "build_timeout_s": 300,
+    "server_start_timeout_s": 10,
+    "suite_timeout_s": 300
+  },
+  "pilot_safety_ceiling_usd": 2.00
+}

@@ -1,0 +1,59 @@
+{
+  "label": "pilot-smoke-arm-a-port-attempt (setup/smoke infrastructure; not published results)",
+  "frozen_at": "2026-11-06T19:59:10Z",
+  "redis_pin": {
+    "version": "7.2.17",
+    "commit": "83937c51afb53e1c69661c8e1533e0e19b896fe1",
+    "licence": "BSD-3-Clause",
+    "tarball_sha256": "c627dc8da3ded4d68279b1832733e45e3d8a8d1b2f6d24c55ffd2251e48a57b3",
+    "reference_binary_sha256": "559705dce766662ad4b0f2aa89fcd970ca1ef7675be2941f1bea8f2bcf46ca92"
+  },
+  "model_id_at_freeze": "deepseek/deepseek-v3.2",
+  "model_id_note": "model_id is the only config field excluded from config_sha256_sans_secrets; changing it does not break the freeze.",
+  "hashed": {
+    "scope_sha256": "a4e295ae8b40d1bc72dc9e31a36fdf59f3caf1a665910bf91ff61aacd2a3e588",
+    "prompt_system_sha256": "8ad677df0a66b3817b67bed0cba7223559ade1903bb37e66e9ebea7ef7560157",
+    "prompt_arm_a_sha256": "dcebd9f9410f145284e660f28d6d7de5f411779be59a26ec468a795299d1183c",
+    "smoke_tree_sha256": "5e4eb28cca5e2a00265e36eba7894a4b48730e9344049d086d93873b29b51ed7",
+    "smoke_files": {
+      "smoke.py": "fc5b5bc90e0fd8ef1691400262eb368dcdca2f767e868f6d5b68793ed48c7b6e"
+    },
+    "hidden_tree_sha256": "7c62de7184c67e91f8c69e59324c7b0d2983c44c24ea63c4afbd6bcbaddf42fc",
+    "hidden_files": {
+      "README.md": "f21077233b42d5c030076601f380539b8317cedfb45c9999b0c26dcd924130ba",
+      "run_hidden.py": "b2aa78448f2a1824203036afb7d33085eb1940a36e09c4625570aa20e494df50"
+    },
+    "config_sha256_sans_secrets": "028899b341cb27aabc9a401a5c4dfb59b139583f0140729d5265dfab5ca938be",
+    "upstream_tree_sha256": "9d4ca19b951ea9d27f7c4e68009f9c4620d9fae2a4348143782f48fa11a3b04e",
+    "harness_files": {
+      "__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "agent_run.py": "e27d07050cccbacc6d0e06c0854b6f22ad3d94a68b455512b6b0e649098be074",
+      "common.py": "4d3e79491a1015a0d01e8a15b2cfeae51363fb26bd63e7f71e184a081e550132",
+      "freeze.py": "49a2bec8ba633152a123fb78f13a1e9b31586d05c4acd416aadc2e7904d5ea67",
+      "score.py": "8da3cddfb71823a990f6a675fa6d7568e15e57c55c0c778ffe8d5f2c5fd5904c",
+      "selftest.py": "a035601ed6b1136ce7ada706046ee73a99d244eabecdf0e2325680426568f834",
+      "tools.py": "1f97cb1080bdd0754c9bed3c54c74286ec3d7b1073b42e89d75950a62d0e76d7",
+      "validate_reference.py": "52a6eb2a754e9e2e3da64571779670c9d4efa469f28e6212a5c66a6bad7c6337"
+    },
+    "caps": {
+      "max_iterations": 60,
+      "max_cost_usd": 1.5,
+      "max_tokens": 8192,
+      "wall_timeout_s": 3600,
+      "temperature": null
+    },
+    "pilot_safety_ceiling_usd": 2.0
+  },
+  "reference_validation": {
+    "sha256": "60d4b9b0c5e51daed7b4def2fca9fe924b98923f5e476b3607867560e04c3a1b",
+    "redis_version": "Redis server v=7.2.17 sha=00000000:0 malloc=libc bits=64 build=a995b17c51e5f94c",
+    "smoke": "6/6",
+    "hidden": "43/43",
+    "repeats": 1
+  },
+  "tests_validated_on_reference": true,
+  "scored_runs_allowed": true,
+  "contestant_runs_performed_at_freeze": 0,
+  "openrouter_spend_usd_at_freeze": 0.0,
+  "authored_by": "Claude Code (authoring only; fixed artefacts). Loop/scoring owned by deterministic scripts."
+}

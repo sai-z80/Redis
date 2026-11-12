@@ -1,0 +1,21 @@
+This repository contains material under two licences.
+
+1. Redis source subset (experiment/upstream/)
+   Redis 7.2.17, upstream commit 83937c51afb53e1c69661c8e1533e0e19b896fe1
+   Copyright (c) 2006-2020, Salvatore Sanfilippo. All rights reserved.
+   Licensed under the BSD 3-Clause License; the full text is in experiment/upstream/COPYING.
+   The files are unmodified copies of upstream files.
+
+2. Contestant Go code (experiment/runs/pilot-a-deepseek-v3.2-r2/workspace/*.go, go.mod)
+   An LLM agent (deepseek/deepseek-v3.2) produced this code as a port derived from the Redis source subset above.
+   As a derived work it is subject to the Redis BSD 3-Clause notice in experiment/upstream/COPYING. The code is
+   published exactly as the agent left it and has no licence header of its own; this NOTICE supplies the attribution.
+
+3. Everything else (harness, tests, prompts, documentation)
+   Licensed under the MIT License in LICENSE.
+
+"Redis" is a trademark of its owners. This project is not affiliated with or endorsed by Redis.
+See ATTRIBUTION.md for file lists and hashes.
+
+4. Test-suite publication
+   experiment/tests/hidden/ is published with this repo and is therefore public. See PUBLIC_TESTS_NOTICE.md.
